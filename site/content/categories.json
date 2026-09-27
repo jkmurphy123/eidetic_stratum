@@ -1,0 +1,9 @@
+[
+  {"slug":"world-news","label":"World News"},
+  {"slug":"local-news","label":"Local News"},
+  {"slug":"unusual-discoveries","label":"Unusual Discoveries"},
+  {"slug":"agony-column","label":"Agony Column"},
+  {"slug":"common-enquiries","label":"Common Enquiries","description":"Frequently asked questions and common enquiries from readers about the paper, Alderwick and the Eidetic discipline."},
+  {"slug":"rare-books-and-items","label":"Rare Books & Items"},
+  {"slug":"whos-who","label":"Who's Who","description":"Articles about famous people, notable Eideticians, civic figures and other names of consequence in Alderwick."}
+]

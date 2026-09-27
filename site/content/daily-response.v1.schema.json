@@ -1,0 +1,15 @@
+{
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["stories","new_terms"],
+  "properties":{
+    "stories":{"type":"array","maxItems":3,"items":{"type":"object","additionalProperties":false,"required":["title","summary","category","author","paragraphs","tags","related_ids"],"properties":{
+      "title":{"type":"string","minLength":1},"summary":{"type":"string","minLength":1},"category":{"type":"string","minLength":1},"author":{"type":"string","minLength":1},"dateline":{"type":"string","minLength":1},
+      "paragraphs":{"type":"array","minItems":4,"maxItems":6,"items":{"type":"string","minLength":1}},
+      "tags":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+      "related_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9]+(?:-[a-z0-9]+)*$"}}
+    }}},
+    "new_terms":{"type":"array","maxItems":10,"items":{"type":"object","additionalProperties":false,"required":["term","meaning"],"properties":{"term":{"type":"string","minLength":1},"meaning":{"type":"string","minLength":1}}}}
+  }
+}

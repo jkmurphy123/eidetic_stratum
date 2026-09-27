@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+src/generated/
+public/indexes/
+public/images/generated/
+public/images/.generated-stage-*/
+public/images/.generated-backup-*/
+.ingest-stage-*/
+.ingest.lock
+.daily-draft.lock
+drafts/
+quarantine/
+.DS_Store

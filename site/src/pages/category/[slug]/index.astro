@@ -1,0 +1,9 @@
+---
+import FeedPage from '../../../components/FeedPage.astro';
+import archive from '../../../generated/articles.json';
+export function getStaticPaths() {
+  return archive.categories.map(category => ({params:{slug:category.slug}}));
+}
+const {slug} = Astro.params;
+---
+<FeedPage kind="category" slug={slug} />

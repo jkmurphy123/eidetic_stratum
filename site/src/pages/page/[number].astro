@@ -1,0 +1,10 @@
+---
+import FeedPage from '../../components/FeedPage.astro';
+import archive from '../../generated/articles.json';
+import {createArchive} from '../../lib/archive.mjs';
+export function getStaticPaths() {
+  return createArchive(archive.articles,archive.categories).feedPages().slice(1).map(page => ({params:{number:String(page.number)}}));
+}
+const number = Number(Astro.params.number);
+---
+<FeedPage kind="home" number={number} />

@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { printEditionDate } from '../../lib/dates.mjs';
+import archive from '../../generated/articles.json';
+import {createArchive} from '../../lib/archive.mjs';
+export function getStaticPaths() {
+  return archive.articles.map(article => ({params:{id:article.id},props:{article}}));
+}
+const {article} = Astro.props;
+const category = archive.categories.find(item => item.slug === article.category);
+const related = createArchive(archive.articles,archive.categories).related(article);
+---
+<BaseLayout title={`${article.title} | The Alderwick Correspondent`} description={article.summary} active={article.category}>
+  <div class="article-top"><a class="back-link" href={`/category/${category.slug}/`}>← {category.label}</a><p class="overline">From the {category.label} desk</p><h1>{article.title}</h1><p class="article-deck">{article.summary}</p><div class="article-meta"><span>By {article.author}</span><span>{printEditionDate(article.published_at)}</span>{article.dateline && <span>{article.dateline}</span>}</div></div>
+  <div class="article-body-wrap"><article class="article-body">
+    {article.image && <figure><img src={article.image.src} alt={article.image.alt} width={article.image.width} height={article.image.height} decoding="async" /><figcaption>{article.image.caption} <span>{article.image.credit}</span></figcaption></figure>}
+    {article.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+    {article.tags.length > 0 && <div class="tag-list" aria-label="Article topics">{article.tags.map(tag => <a href={`/tag/${tag}/`}>{tag.replaceAll('-', ' ')}</a>)}</div>}
+    {related.length > 0 && <aside class="related"><h2>Further Reading</h2><ul>{related.map(item => <li><a href={`/articles/${item.id}/`}>{item.title}</a></li>)}</ul></aside>}
+  </article><aside class="article-aside"><p class="overline">The Correspondent's Record</p><p>Reporting from Alderwick and beyond, where familiar appearances invite closer examination.</p><a href="/">Return to the front page →</a></aside></div>
+</BaseLayout>

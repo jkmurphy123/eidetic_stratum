@@ -1,0 +1,14 @@
+---
+import { printEditionDate } from '../lib/dates.mjs';
+const { article, prominent = false } = Astro.props;
+const image = article.image;
+---
+<article class:list={['article-card', {prominent}]}>
+  {image && <a class="card-image" href={`/articles/${article.id}/`}><img src={image.cardSrc} alt={image.alt} width={image.cardWidth} height={image.cardHeight} loading="lazy" decoding="async" /></a>}
+  <div class="card-content">
+    <p class="eyebrow">{article.category.replaceAll('-', ' ')} <span aria-hidden="true">·</span> {printEditionDate(article.published_at)}</p>
+    <h3><a href={`/articles/${article.id}/`}>{article.title}</a></h3>
+    <p class="deck">{article.summary}</p>
+    <p class="byline">By {article.author}</p>
+  </div>
+</article>

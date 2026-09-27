@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import archive from '../../generated/articles.json';
+const tags = [...new Set(archive.articles.flatMap(article => article.tags))].sort();
+---
+<BaseLayout title="Search | The Alderwick Correspondent">
+  <div class="section-heading"><p class="overline">The Correspondent · Index</p><h1>Search the reports</h1><p>Explore headlines, dispatches and subjects across the archive.</p></div>
+  <form id="search-form" class="search-form" action="/search/" method="get" role="search">
+    <label for="search-query">Search words</label>
+    <input id="search-query" type="search" name="q" autocomplete="off" placeholder="e.g. Prime Referent" />
+    <div class="search-filters">
+      <div><label for="search-category">Section</label><select name="category" id="search-category"><option value="">All sections</option>{archive.categories.map(category => <option value={category.slug}>{category.label}</option>)}</select></div>
+      <div><label for="search-tag">Subject</label><select name="tag" id="search-tag"><option value="">All subjects</option>{tags.map(tag => <option value={tag}>{tag.replaceAll('-', ' ')}</option>)}</select></div>
+      <button type="submit">Search</button>
+    </div>
+  </form>
+  <p id="search-fallback">Search requires JavaScript. Browse the <a href="/">front page</a> or choose a section in the navigation above.</p>
+  <div id="search-output" hidden><p id="search-status" role="status" aria-live="polite">Enter words to search the archive.</p><div id="search-results" class="search-results"></div></div>
+  <script>
+    import {searchRecords} from '../../lib/search.mjs';
+    const form=document.querySelector('#search-form');
+    const query=form.elements.namedItem('q');
+    const category=form.elements.namedItem('category');
+    const tag=form.elements.namedItem('tag');
+    const output=document.querySelector('#search-output');
+    const results=document.querySelector('#search-results');
+    const status=document.querySelector('#search-status');
+    document.querySelector('#search-fallback').hidden=true;
+    output.hidden=false;
+    let recordsPromise;
+    let timer;
+    let requestNumber=0;
+    function fromUrl() {
+      const params=new URLSearchParams(location.search);
+      query.value=params.get('q') || '';
+      category.value=params.get('category') || '';
+      tag.value=params.get('tag') || '';
+    }
+    function updateUrl() {
+      const params=new URLSearchParams();
+      for (const control of [query,category,tag]) if (control.value.trim()) params.set(control.name,control.value.trim());
+      history.replaceState(null,'',`/search/${params.size ? `?${params}` : ''}`);
+    }
+    function render(items) {
+      results.replaceChildren();
+      for (const item of items) {
+        const article=document.createElement('article');
+        article.className='search-result';
+        const heading=document.createElement('h2');
+        const link=document.createElement('a');
+        link.href=item.url;
+        link.textContent=item.title;
+        heading.append(link);
+        const deck=document.createElement('p');
+        deck.textContent=item.summary;
+        const metadata=document.createElement('p');
+        metadata.className='eyebrow';
+        metadata.textContent=item.category.replaceAll('-',' ');
+        article.append(metadata,heading,deck);
+        results.append(article);
+      }
+      status.textContent=`${items.length} ${items.length===1 ? 'report' : 'reports'} found.`;
+    }
+    async function run() {
+      const current=++requestNumber;
+      updateUrl();
+      if (!query.value.trim()) {
+        results.replaceChildren();
+        status.textContent='Enter words to search the archive.';
+        return;
+      }
+      status.textContent='Searching reports…';
+      try {
+        recordsPromise ||= fetch('/indexes/search.json').then(response => {
+          if (!response.ok) throw new Error('Index unavailable');
+          return response.json();
+        }).then(index => {
+          if (index.version !== 1 || !Array.isArray(index.records)) throw new Error('Unsupported index');
+          return index.records;
+        });
+        const records=await recordsPromise;
+        if (current !== requestNumber) return;
+        render(searchRecords(records,{q:query.value,category:category.value,tag:tag.value}));
+      } catch {
+        if (current !== requestNumber) return;
+        recordsPromise=undefined;
+        status.textContent='Search is unavailable. Please browse the sections instead.';
+      }
+    }
+    form.addEventListener('submit',event => {event.preventDefault();clearTimeout(timer);run();});
+    form.addEventListener('input',() => {clearTimeout(timer);timer=setTimeout(run,180);});
+    form.addEventListener('change',() => {clearTimeout(timer);run();});
+    window.addEventListener('popstate',() => {fromUrl();run();});
+    fromUrl();
+    run();
+  </script>
+</BaseLayout>

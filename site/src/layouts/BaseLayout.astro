@@ -1,0 +1,31 @@
+---
+import '../styles/site.css';
+import { printEditionDate } from '../lib/dates.mjs';
+import archive from '../generated/articles.json';
+const { title = 'The Alderwick Correspondent', description = 'News for the Serious Eidetician', active = '' } = Astro.props;
+const edition = printEditionDate(new Date().toISOString().slice(0, 19) + 'Z');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="data:," />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="edition-line"><span>ESTABLISHED FOR THE INQUIRING MIND</span><span>ALDERWICK · {edition}</span><span>PRICE: ONE PENNY</span></div>
+      <div class="brand"><a href="/" aria-label="The Alderwick Correspondent home">The Alderwick Correspondent</a><p>News for the Serious Eidetician</p></div>
+      <nav class="category-nav" aria-label="Sections">
+        <a href="/" aria-current={active === 'home' ? 'page' : undefined}>Front Page</a>
+        {archive.categories.map(category => <a href={`/category/${category.slug}/`} aria-current={active === category.slug ? 'page' : undefined}>{category.label}</a>)}
+      </nav>
+      <div class="search-shortcut"><a href="/search/">Search the archive →</a></div>
+    </header>
+    <main id="main" class="page-shell"><slot /></main>
+    <footer class="site-footer"><div><strong>The Alderwick Correspondent</strong><span>News for the Serious Eidetician</span></div><p>A fictional newspaper from the city of Alderwick. <a href="/about/">About this publication</a></p></footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id","slug","title","summary","category","published_at","author","paragraphs","tags","image","related_ids"],
+  "properties": {
+    "id": {"type":"string","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "slug": {"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type":"string","minLength":1},
+    "summary": {"type":"string","minLength":1},
+    "category": {"type":"string","minLength":1},
+    "published_at": {"type":"string"},
+    "author": {"type":"string","minLength":1},
+    "dateline": {"type":"string","minLength":1},
+    "paragraphs": {"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+    "tags": {"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+    "related_ids": {"type":"array","uniqueItems":true,"items":{"type":"string"}},
+    "image": {"anyOf":[{"type":"null"},{"type":"object","additionalProperties":false,"required":["src","alt","caption","credit"],"properties":{"src":{"type":"string"},"alt":{"type":"string","minLength":1},"caption":{"type":"string"},"credit":{"type":"string","minLength":1}}}]}
+  }
+}
