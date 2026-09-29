@@ -13,7 +13,7 @@ function setup(t) {
  fs.cpSync(path.join(source,'content'),path.join(root,'content'),{recursive:true});
  return root;
 }
-const story=(overrides={})=>({title:'A Second Tram Timetable Is Proposed',summary:'The council weighs an additional service to the quay.',category:'local-news',author:'The Civic Correspondent',paragraphs:['The council heard a proposal for an additional tram service.','Inspectors reported that the existing route is busiest at dusk.','One member questioned whether the new timetable would strain the depot.','A further hearing is expected after the trial has been measured.'],tags:['transport'],related_ids:['2026-09-25-bridge-toll-hearing'],...overrides});
+const story=(overrides={})=>({title:'A Second Tram Timetable Is Proposed',summary:'The council weighs an additional service to the quay.',category:'field-reports',author:'The Civic Correspondent',paragraphs:['The council heard a proposal for an additional tram service.','Inspectors reported that the existing route is busiest at dusk.','One member questioned whether the new timetable would strain the depot.','A further hearing is expected after the trial has been measured.'],tags:['transport'],related_ids:['2026-09-25-bridge-toll-hearing'],...overrides});
 const response=(stories=[story()],new_terms=[])=>JSON.stringify({stories,new_terms});
 
 test('valid draft stages an ingest-compatible batch, review checklist and proposed term without touching sources',async t=>{
@@ -30,7 +30,7 @@ test('valid draft stages an ingest-compatible batch, review checklist and propos
  assert.equal(batch.articles[0].record.id,`2026-09-25-${batch.articles[0].record.slug}`);
  assert.match(fs.readFileSync(path.join(result.dir,'REVIEW.md'),'utf8'),/editorial|continuity|ingest/i);
  assert.match(fs.readFileSync(path.join(result.dir,'proposed-terms.json'),'utf8'),/Transit Referent/);
- assert.equal(loadArchive(root).articles.length,57);
+ assert.equal(loadArchive(root).articles.length,139);
  assert.equal(fs.existsSync(path.join(root,'content/batches')),false);
 });
 
@@ -50,7 +50,7 @@ test('invalid category, model-supplied image, malformed JSON and excess stories 
   assert.equal(result.status,'quarantined');
   assert.equal(fs.existsSync(path.join(result.dir,'batch/manifest.json')),false);
  }
- assert.equal(loadArchive(root).articles.length,57);
+ assert.equal(loadArchive(root).articles.length,139);
  assert.equal(fs.existsSync(path.join(root,'content/batches')),false);
 });
 

@@ -1,8 +1,25 @@
 {
- "id":"2026-09-24-northern-relay-returns", "slug":"northern-relay-returns", "title":"Northern Relay Reopens After a Week of Silence", "summary":"Messages have resumed, though the station has offered no account of the interruption.", "category":"world-news", "published_at":"2026-09-24T15:00:00Z", "author":"The Continental Correspondent", "dateline":"Northern Relay Office", "paragraphs":[
- "The northern relay transmitted its first ordinary bulletin in eight days shortly before noon. It contained the customary record of weather, arrivals and instrument readings, with no explanation of the silence that preceded it.",
- "A clerk at the central exchange said three earlier requests for an account of the interruption had received no answer. The exchange continued to forward urgent messages by the coast route, at considerable additional expense to the smaller stations.",
- "The relay's latest measurements are within the accepted range. That fact will reassure those who feared an accident to the instruments, though it does not establish whether the delay arose on the line or within the station itself.",
- "An inquiry has been requested by the subscribers who maintain the service. Until its report is available, the Correspondent will not repeat the stories of abandoned rooms and extinguished lamps circulating among passengers on the northern road."
- ], "tags":["stations","communications"], "image":null, "related_ids":["2026-09-25-southern-stations-agree"]
+  "id": "2026-09-24-northern-relay-returns",
+  "slug": "northern-relay-returns",
+  "title": "Northern Relay Reopens After a Week of Silence",
+  "summary": "Messages have resumed, though the station has offered no account of the interruption.",
+  "category": "world-news",
+  "published_at": "2026-09-24T15:00:00Z",
+  "author": "The Continental Correspondent",
+  "dateline": "Northern Relay Office",
+  "paragraphs": [
+    "The northern relay transmitted its first ordinary bulletin in eight days shortly before noon. It contained the customary record of weather, arrivals and instrument readings, with no explanation of the silence that preceded it.",
+    "A clerk at the central exchange said three earlier requests for an account of the interruption had received no answer. The exchange continued to forward urgent messages by the coast route, at considerable additional expense to the smaller stations.",
+    "The relay's latest measurements are within the accepted range. That fact will reassure those who feared an accident to the instruments, though it does not establish whether the delay arose on the line or within the station itself.",
+    "An inquiry has been requested by the subscribers who maintain the service. Until its report is available, the Correspondent will not repeat the stories of abandoned rooms and extinguished lamps circulating among passengers on the northern road."
+  ],
+  "tags": [
+    "stations",
+    "communications"
+  ],
+  "image": null,
+  "related_ids": [
+    "2026-09-25-southern-stations-agree"
+  ],
+  "topic": "World News"
 }

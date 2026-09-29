@@ -1,8 +1,25 @@
 {
- "id":"2026-09-24-interstice-plate-dispute", "slug":"interstice-plate-dispute", "title":"Two Plates, One Apparent Interstice", "summary":"A disputed mark on the eastern chart may be an impression left by its copying process.", "category":"unusual-discoveries", "published_at":"2026-09-24T13:45:00Z", "author":"The Observatory Correspondent", "paragraphs":[
- "Two plates made from the same eastern survey disagree at a point that some readers have identified as an Eidetic Interstice. On the earlier plate the mark is a fine unbroken line; on the later impression it appears as an opening.",
- "The engraver who prepared the later copy says the difference was present in the sheet delivered to his workshop. The original observer remembers no such opening, but has not seen the sealed master since returning from the station.",
- "Neither account resolves whether the mark belongs to the observation, its transcription or the plate itself. The Survey Office has postponed a proposed expedition until the master can be compared with both published versions.",
- "For now the eastern chart will carry a marginal caution. The Correspondent has examined the two printed impressions, but not the master, and therefore makes no claim that a passage has been found."
- ], "tags":["interstices","charts","surveying"], "image":null, "related_ids":["2026-09-25-southern-stations-agree"]
+  "id": "2026-09-24-interstice-plate-dispute",
+  "slug": "interstice-plate-dispute",
+  "title": "Two Plates, One Apparent Interstice",
+  "summary": "A disputed mark on the eastern chart may be an impression left by its copying process.",
+  "category": "unusual-discoveries",
+  "published_at": "2026-09-24T13:45:00Z",
+  "author": "The Observatory Correspondent",
+  "paragraphs": [
+    "Two plates made from the same eastern survey disagree at a point that some readers have identified as an Eidetic Interstice. On the earlier plate the mark is a fine unbroken line; on the later impression it appears as an opening.",
+    "The engraver who prepared the later copy says the difference was present in the sheet delivered to his workshop. The original observer remembers no such opening, but has not seen the sealed master since returning from the station.",
+    "Neither account resolves whether the mark belongs to the observation, its transcription or the plate itself. The Survey Office has postponed a proposed expedition until the master can be compared with both published versions.",
+    "For now the eastern chart will carry a marginal caution. The Correspondent has examined the two printed impressions, but not the master, and therefore makes no claim that a passage has been found."
+  ],
+  "tags": [
+    "interstices",
+    "charts",
+    "surveying"
+  ],
+  "image": null,
+  "related_ids": [
+    "2026-09-25-southern-stations-agree"
+  ],
+  "topic": "Unusual Discoveries"
 }

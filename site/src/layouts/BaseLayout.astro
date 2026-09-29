@@ -2,7 +2,7 @@
 import '../styles/site.css';
 import { printEditionDate } from '../lib/dates.mjs';
 import archive from '../generated/articles.json';
-const { title = 'The Alderwick Correspondent', description = 'News for the Serious Eidetician', active = '' } = Astro.props;
+const { title = 'The Alderwick Correspondent', description = 'News for the Serious Eidetician', active = '', topics = [] } = Astro.props;
 const edition = printEditionDate(new Date().toISOString().slice(0, 19) + 'Z');
 ---
 <!doctype html>
@@ -23,9 +23,36 @@ const edition = printEditionDate(new Date().toISOString().slice(0, 19) + 'Z');
         <a href="/" aria-current={active === 'home' ? 'page' : undefined}>Front Page</a>
         {archive.categories.map(category => <a href={`/category/${category.slug}/`} aria-current={active === category.slug ? 'page' : undefined}>{category.label}</a>)}
       </nav>
-      <div class="search-shortcut"><a href="/search/">Search the archive →</a></div>
+      <div class="header-tools">
+        {archive.categories.some(c => c.slug === active) && <div class="topic-filter"><label for="topic-select">Filter</label><select id="topic-select"><option value="">All</option>{topics.map(topic => <option value={topic}>{topic}</option>)}</select></div>}
+        <div class="search-shortcut"><a href="/search/">Search the archive →</a></div>
+      </div>
     </header>
     <main id="main" class="page-shell"><slot /></main>
     <footer class="site-footer"><div><strong>The Alderwick Correspondent</strong><span>News for the Serious Eidetician</span></div><p>A fictional newspaper from the city of Alderwick. <a href="/about/">About this publication</a></p></footer>
+    <script>
+      (function(){
+        const select = document.getElementById('topic-select');
+        if (!select) return;
+        const cards = document.querySelectorAll('.article-card[data-topic]');
+        const paginations = document.querySelectorAll('.feed-pagination');
+        const noResults = document.createElement('p');
+        noResults.textContent = 'No reports match the selected filter.';
+        noResults.hidden = true;
+        const grid = document.querySelector('.card-grid');
+        if (grid) grid.after(noResults);
+        select.addEventListener('change', function() {
+          const value = select.value;
+          let visible = 0;
+          cards.forEach(function(card) {
+            const match = !value || card.dataset.topic === value;
+            card.hidden = !match;
+            if (match) visible++;
+          });
+          paginations.forEach(function(p) { p.hidden = !!value; });
+          if (noResults) noResults.hidden = visible > 0;
+        });
+      })();
+    </script>
   </body>
 </html>

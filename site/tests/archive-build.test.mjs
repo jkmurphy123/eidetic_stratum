@@ -27,11 +27,12 @@ test('isolated 26-story build reaches the oldest story through home, category an
   const read=relative => fs.readFileSync(path.join(tmp,'dist',relative),'utf8');
   assert.match(read('index.html'),/href="\/page\/2\/"/);
   assert.match(read('page/2/index.html'),/Fixture 0/);
-  assert.match(read('category/world-news/index.html'),/href="\/category\/world-news\/page\/2\/"/);
-  assert.match(read('category/world-news/page/2/index.html'),/Fixture 0/);
+  assert.match(read('category/world-news/index.html'),/Fixture 0/);
+  assert.match(read('category/world-news/index.html'),/Fixture 25/);
   assert.match(read('tag/fixture-subject/index.html'),/href="\/tag\/fixture-subject\/page\/2\/"/);
   assert.match(read('tag/fixture-subject/page/2/index.html'),/Fixture 0/);
   assert.equal(fs.existsSync(path.join(tmp,'dist/page/3/index.html')),false);
+  assert.equal(fs.existsSync(path.join(tmp,'dist/category/world-news/page/2/index.html')),false);
   assert.equal(fs.existsSync(path.join(tmp,'dist/tag/unknown/index.html')),false);
   assert.equal(fs.existsSync(path.join(tmp,'dist/category/unknown/index.html')),false);
   assert.equal(JSON.parse(read('indexes/search.json')).records.length,26);

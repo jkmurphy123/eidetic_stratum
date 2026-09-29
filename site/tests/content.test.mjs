@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { validateRecords } from '../scripts/content.mjs';
 
-const categories = [{slug:'world-news',label:'World News'}];
+const categories = [{slug:'world-news',label:'World News'}, {slug:'agony-column',label:'Agony Column'}];
 const record = (overrides={}) => ({
  id:'2026-09-25-sample', slug:'sample', title:'The Standard', summary:'A brief report.',
  category:'world-news', published_at:'2026-09-25T12:00:00Z', author:'Staff',
@@ -15,6 +15,9 @@ test('accepts a full story and a shorter notice with a warning', () => {
  const short = check([record({paragraphs:['One.','Two.']})]);
  assert.equal(short.errors.length, 0);
  assert.match(short.warnings.join(' '), /short/i);
+ const agony = check([record({category:'agony-column',paragraphs:['A terse private notice.']})]);
+ assert.equal(agony.errors.length, 0);
+ assert.doesNotMatch(agony.warnings.join(' '), /short/i);
 });
 
 test('rejects duplicate ids and slugs', () => {

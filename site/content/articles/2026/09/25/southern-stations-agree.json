@@ -1,8 +1,26 @@
 {
- "id":"2026-09-25-southern-stations-agree", "slug":"southern-stations-agree", "title":"Southern Stations Agree on Common Chart Marks", "summary":"A shared notation may allow expedition records to be compared without recopying them.", "category":"world-news", "published_at":"2026-09-25T10:20:00Z", "author":"The Continental Correspondent", "dateline":"South Meridian Exchange", "paragraphs":[
-  "Delegates from four southern survey stations have agreed to print a common set of chart marks for the next year's reports. Their instruments remain different, but the new symbols should let readers distinguish an observed boundary from one inferred by calculation.",
-  "The disagreement was not merely typographic. Earlier charts used the same broken circle for an Eidetic Interstice and for an interruption in the observer's record. A copied plate could therefore appear to show a passage where no passage had been measured.",
-  "The agreement does not require any station to alter its instruments or its account of the strata. A small committee will publish a conversion table for older plates, beginning with those cited most often in current correspondence.",
-  "Alderwick's Observatory has not signed the agreement. Its secretary said the proposal would be examined when the full table arrives, and that local reports will continue to explain their marks in the margin."
- ], "tags":["surveying","interstices","charts"], "image":null, "related_ids":["2026-09-25-prime-referent-drift"]
+  "id": "2026-09-25-southern-stations-agree",
+  "slug": "southern-stations-agree",
+  "title": "Southern Stations Agree on Common Chart Marks",
+  "summary": "A shared notation may allow expedition records to be compared without recopying them.",
+  "category": "world-news",
+  "published_at": "2026-09-25T10:20:00Z",
+  "author": "The Continental Correspondent",
+  "dateline": "South Meridian Exchange",
+  "paragraphs": [
+    "Delegates from four southern survey stations have agreed to print a common set of chart marks for the next year's reports. Their instruments remain different, but the new symbols should let readers distinguish an observed boundary from one inferred by calculation.",
+    "The disagreement was not merely typographic. Earlier charts used the same broken circle for an Eidetic Interstice and for an interruption in the observer's record. A copied plate could therefore appear to show a passage where no passage had been measured.",
+    "The agreement does not require any station to alter its instruments or its account of the strata. A small committee will publish a conversion table for older plates, beginning with those cited most often in current correspondence.",
+    "Alderwick's Observatory has not signed the agreement. Its secretary said the proposal would be examined when the full table arrives, and that local reports will continue to explain their marks in the margin."
+  ],
+  "tags": [
+    "surveying",
+    "interstices",
+    "charts"
+  ],
+  "image": null,
+  "related_ids": [
+    "2026-09-25-prime-referent-drift"
+  ],
+  "topic": "World News"
 }

@@ -1,8 +1,26 @@
 {
- "id":"2026-09-24-library-hours-extended", "slug":"library-hours-extended", "title":"Reading Room to Open an Hour Earlier", "summary":"The new hours answer a petition from apprentices and early-shift clerks.", "category":"local-news", "published_at":"2026-09-24T14:20:00Z", "author":"Mara Bell, Civic Desk", "dateline":"Alderwick Public Library", "paragraphs":[
- "The public reading room will open at seven rather than eight on three mornings each week beginning next month. The library committee approved the trial after receiving a petition signed by apprentices, quay clerks and several teachers.",
- "A committee member said the earlier hour should allow workers to consult the reference shelves before their shifts. The lending desk will retain its present hours, since the trial includes no provision for additional staff.",
- "The proposal attracted little opposition, but the caretaker asked that the western lamps be repaired before readers are admitted in the darker months. The engineer has promised an inspection before the first morning of the trial.",
- "At the end of six weeks the librarian will submit attendance figures. If the room is used as steadily as the petitioners expect, the committee may consider extending the arrangement to every weekday."
- ], "tags":["alderwick","library","council"], "image":null, "related_ids":["2026-09-25-bridge-toll-hearing"]
+  "id": "2026-09-24-library-hours-extended",
+  "slug": "library-hours-extended",
+  "title": "Reading Room to Open an Hour Earlier",
+  "summary": "The new hours answer a petition from apprentices and early-shift clerks.",
+  "category": "world-news",
+  "published_at": "2026-09-24T14:20:00Z",
+  "author": "Mara Bell, Civic Desk",
+  "dateline": "Alderwick Public Library",
+  "paragraphs": [
+    "The public reading room will open at seven rather than eight on three mornings each week beginning next month. The library committee approved the trial after receiving a petition signed by apprentices, quay clerks and several teachers.",
+    "A committee member said the earlier hour should allow workers to consult the reference shelves before their shifts. The lending desk will retain its present hours, since the trial includes no provision for additional staff.",
+    "The proposal attracted little opposition, but the caretaker asked that the western lamps be repaired before readers are admitted in the darker months. The engineer has promised an inspection before the first morning of the trial.",
+    "At the end of six weeks the librarian will submit attendance figures. If the room is used as steadily as the petitioners expect, the committee may consider extending the arrangement to every weekday."
+  ],
+  "tags": [
+    "alderwick",
+    "library",
+    "council"
+  ],
+  "image": null,
+  "related_ids": [
+    "2026-09-25-bridge-toll-hearing"
+  ],
+  "topic": "World News"
 }

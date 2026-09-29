@@ -23,7 +23,7 @@ function site(t){
  fs.symlinkSync(path.join(source,'node_modules'),path.join(root,'node_modules'),'dir');
  return root;
 }
-const story=title=>({title,summary:'The quay clerks examine a revised document.',category:'local-news',author:'The Civic Correspondent',paragraphs:['The clerks examined a revised document at the quay.','Several witnesses compared its details with the earlier register.','An officer requested a second inspection before any change is agreed.','The council will receive the findings at its next meeting.'],tags:['quay'],related_ids:[]});
+const story=title=>({title,summary:'The quay clerks examine a revised document.',category:'field-reports',author:'The Civic Correspondent',paragraphs:['The clerks examined a revised document at the quay.','Several witnesses compared its details with the earlier register.','An officer requested a second inspection before any change is agreed.','The council will receive the findings at its next meeting.'],tags:['quay'],related_ids:[]});
 
 test('CLI drafts two local days from stub, ingests only after explicit review, then builds old and new URLs',async t=>{
  const root=site(t);let secondSawFirst=false;

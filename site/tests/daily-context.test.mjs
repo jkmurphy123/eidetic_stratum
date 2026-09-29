@@ -13,8 +13,8 @@ function setup(t) {
  for(const relative of ['world/emerging-terms.v1.json','world/continuity.v1.json','prompts/daily-edition.v1.txt']) fs.copyFileSync(path.join(original,relative),path.join(root,'content',relative));
  return root;
 }
-const categories=[{slug:'local-news',label:'Local News'},{slug:'world-news',label:'World News'}];
-const article=i=>({id:`2026-09-24-report-${i}`,title:`Report ${i}`,tags:['surveying'],published_at:`2026-09-24T12:${String(i).padStart(2,'0')}:00Z`,category:'local-news'});
+const categories=[{slug:'field-reports',label:'Field Reports'},{slug:'world-news',label:'World News'}];
+const article=i=>({id:`2026-09-24-report-${i}`,title:`Report ${i}`,tags:['surveying'],published_at:`2026-09-24T12:${String(i).padStart(2,'0')}:00Z`,category:'field-reports'});
 
 test('context includes bounded newest headlines, section slugs, reviewed world notes and prompt version',t=>{
  const root=setup(t);
@@ -23,7 +23,7 @@ test('context includes bounded newest headlines, section slugs, reviewed world n
  assert.equal(result.date,'2026-09-25');
  assert.equal(result.recent.length,20);
  assert.equal(result.recent[0].id,'2026-09-24-report-24');
- assert.deepEqual(result.categories.map(c=>c.slug),['local-news','world-news']);
+ assert.deepEqual(result.categories.map(c=>c.slug),['field-reports','world-news']);
  assert.match(result.prompt,/Eidetic Stratum/);
  assert.ok(result.terms.some(x=>x.term==='Prime Referent'));
  assert.ok(result.continuity.facts.length>0);

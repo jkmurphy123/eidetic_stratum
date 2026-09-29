@@ -11,19 +11,26 @@ const label = kind === 'category' ? category?.label : slug.replaceAll('-',' ');
 const root = kind === 'home' ? '/' : kind === 'category' ? `/category/${slug}/` : `/tag/${slug}/`;
 const urlFor = n => n === 1 ? root : `${root}page/${n}/`;
 const title = kind === 'home' ? 'From the Front Page' : label;
-const description = kind === 'home' ? 'Observations, inquiries and the affairs of Alderwick.' : category?.description ?? `${page.total} ${page.total === 1 ? 'report' : 'reports'} from our desk.`;
-const [lead,...cards] = page.articles;
+const allCategoryArticles = kind === 'category' ? archive.articles.filter(a => a.category === slug) : [];
+const articleCount = kind === 'category' ? allCategoryArticles.length : page.total;
+const description = kind === 'home' ? 'Observations, inquiries and the affairs of Alderwick.' : category?.description ?? `${articleCount} ${articleCount === 1 ? 'report' : 'reports'} from our desk.`;
+const [lead,...cards] = kind === 'home' ? selectors.feed(1).articles : [];
+const topics = kind === 'category' ? (archive.topicsByCategory[slug] || []) : [];
+const isOldestFirst = slug === 'field-reports';
+const displayArticles = kind === 'category'
+  ? (isOldestFirst ? [...allCategoryArticles].reverse() : allCategoryArticles)
+  : (kind === 'home' && number === 1 ? cards : page.articles);
 ---
-<BaseLayout title={kind === 'home' ? undefined : `${label} | The Alderwick Correspondent`} active={kind === 'category' ? slug : kind === 'home' ? 'home' : ''}>
+<BaseLayout title={kind === 'home' ? undefined : `${label} | The Alderwick Correspondent`} active={kind === 'category' ? slug : kind === 'home' ? 'home' : ''} topics={topics}>
   {kind !== 'home' && <div class="section-heading">{kind !== 'category' && <p class="overline">The Correspondent · Subjects</p>}<h1>{title}</h1><p>{description}</p></div>}
   {kind === 'home' && number === 1 && lead ? <>
     <div class="lead-grid"><article class="lead-story"><p class="eyebrow">Leading Report <span aria-hidden="true">·</span> {archive.categories.find(category => category.slug === lead.category)?.label}</p>{lead.image && <a class="lead-image" href={`/articles/${lead.id}/`}><img src={lead.image.cardSrc} alt={lead.image.alt} width={lead.image.cardWidth} height={lead.image.cardHeight} decoding="async" /></a>}<h2><a href={`/articles/${lead.id}/`}>{lead.title}</a></h2><p class="lead-deck">{lead.summary}</p><p class="byline">By {lead.author}</p><a class="text-link" href={`/articles/${lead.id}/`}>Read the full report <span aria-hidden="true">→</span></a></article><aside class="editor-note"><p class="overline">A Note to Readers</p><h2>At the edge of the known</h2><p>Not every curious measurement proves a new country. Our correspondents report what can be witnessed, what can be disputed, and what must wait for another reading.</p><span class="note-mark" aria-hidden="true">✳</span></aside></div>
     {cards.length > 0 && <div class="section-divider"><h2>Latest Dispatches</h2><span>{cards.length} further reports</span></div>}
   </> : null}
-  {page.articles.length ? <div class="card-grid">{(kind === 'home' && number === 1 ? cards : page.articles).map(article => <ArticleCard article={article} />)}</div> : <p>No reports have been filed {kind === 'home' ? 'yet' : 'in this section yet'}.</p>}
-  {page.totalPages > 1 && <nav class="feed-pagination" aria-label="Archive pages">
-    {number > 1 ? <a href={urlFor(number-1)}>← Newer reports</a> : <span></span>}
+  {displayArticles.length ? <div class="card-grid">{displayArticles.map(article => <ArticleCard article={article} />)}</div> : <p>No reports have been filed {kind === 'home' ? 'yet' : 'in this section yet'}.</p>}
+  {kind !== 'category' && page.totalPages > 1 && <nav class="feed-pagination" aria-label="Archive pages">
+    {number > 1 ? <a href={urlFor(number-1)}>{isOldestFirst ? '← Older reports' : '← Newer reports'}</a> : <span></span>}
     <span>Page {number} of {page.totalPages}</span>
-    {number < page.totalPages ? <a href={urlFor(number+1)}>Older reports →</a> : <span></span>}
+    {number < page.totalPages ? <a href={urlFor(number+1)}>{isOldestFirst ? 'Newer reports →' : 'Older reports →'}</a> : <span></span>}
   </nav>}
 </BaseLayout>

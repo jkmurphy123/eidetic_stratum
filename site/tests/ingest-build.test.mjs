@@ -45,7 +45,7 @@ test('new category and illustrated batch build locally; old URLs persist and mis
  assert.match(read('index.html'),/test-expedition-card\.webp/);
  assert.ok(fs.existsSync(path.join(root,'dist/images/generated',`${id}-card.webp`)));
  assert.ok(fs.existsSync(path.join(root,'dist/articles/2026-09-25-prime-referent-drift/index.html')));
- assert.equal(JSON.parse(read('indexes/search.json')).records.length,58);
+ assert.equal(JSON.parse(read('indexes/search.json')).records.length,140);
  fs.rmSync(path.join(root,'public',src.slice(1)));
  assert.throws(() => run('node',['scripts/validate-content.mjs']),/Command failed/);
  assert.throws(() => run('node',['scripts/prepare-content.mjs']),/Command failed/);

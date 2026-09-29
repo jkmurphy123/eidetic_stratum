@@ -1,8 +1,24 @@
 {
-  "id":"2026-09-25-prime-referent-drift", "slug":"prime-referent-drift", "title":"Surveyors Report a Drift at the Prime Referent", "summary":"A second reading places the original probe's echo beyond the charted arc.", "category":"unusual-discoveries", "published_at":"2026-09-25T12:00:00Z", "author":"The Observatory Correspondent", "dateline":"North Quay Observatory", "paragraphs":[
+  "id": "2026-09-25-prime-referent-drift",
+  "slug": "prime-referent-drift",
+  "title": "Surveyors Report a Drift at the Prime Referent",
+  "summary": "A second reading places the original probe's echo beyond the charted arc.",
+  "category": "unusual-discoveries",
+  "published_at": "2026-09-25T12:00:00Z",
+  "author": "The Observatory Correspondent",
+  "dateline": "North Quay Observatory",
+  "paragraphs": [
     "A discrepancy in the morning survey has prompted the Observatory to request fresh plates from every station with a clear view of the Prime Referent. The displacement is slight, but greater than the instrument's stated margin of error.",
     "The first apparatus was dismantled before noon and compared with the sealed local standard. Its replacement gave nearly the same reading. No one at the Observatory would say whether the Referent itself had moved, or whether the chart by which its position is measured had become unreliable.",
     "A senior Eidetician described the result as a question for instruments rather than philosophers. She warned that a single false reference point could displace the recorded positions of neighboring strata without changing anything beyond the chamber walls.",
     "Copies of the original plates have been placed under seal. The Observatory expects to publish a further comparison after the evening transit, when conditions on the north platform are ordinarily more favorable."
-  ], "tags":["prime-referent","surveying","observatory"], "image":null, "related_ids":[]
+  ],
+  "tags": [
+    "prime-referent",
+    "surveying",
+    "observatory"
+  ],
+  "image": null,
+  "related_ids": [],
+  "topic": "Unusual Discoveries"
 }

@@ -8,7 +8,7 @@ async function serve(t,handler) {
  t.after(()=>new Promise(resolve=>server.close(resolve)));
  return `http://127.0.0.1:${server.address().port}/v1/chat/completions`;
 }
-const context={prompt:'Write fiction.',date:'2026-09-25',categories:[{slug:'local-news',label:'Local News'}],recent:[],terms:[],continuity:{version:1,facts:['Alderwick exists.']},version:1};
+const context={prompt:'Write fiction.',date:'2026-09-25',categories:[{slug:'field-reports',label:'Field Reports'}],recent:[],terms:[],continuity:{version:1,facts:['Alderwick exists.']},version:1};
 
 test('adapter sends bounded prompt to local OpenAI-compatible endpoint and returns content', async t=>{
  const endpoint=await serve(t,async (req,res)=>{

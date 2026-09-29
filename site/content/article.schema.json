@@ -12,6 +12,7 @@
     "published_at": {"type":"string"},
     "author": {"type":"string","minLength":1},
     "dateline": {"type":"string","minLength":1},
+    "topic": {"type":"string","minLength":1},
     "paragraphs": {"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
     "tags": {"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
     "related_ids": {"type":"array","uniqueItems":true,"items":{"type":"string"}},

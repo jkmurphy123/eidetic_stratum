@@ -1,8 +1,26 @@
 {
- "id":"2026-09-25-map-catalogue-sale", "slug":"map-catalogue-sale", "title":"Early Meridian Catalogue Offered for Inspection", "summary":"The bookseller invites careful comparison before the private sale.", "category":"rare-books-and-items", "published_at":"2026-09-25T08:20:00Z", "author":"Books and Objects Desk", "dateline":"St. Anselm's Passage", "paragraphs":[
-  "Mr. Corven, bookseller of St. Anselm's Passage, has placed an early meridian catalogue on view ahead of a private sale. The volume contains twelve folding plates and a later hand's index of station names.",
-  "Its interest lies less in the figures than in the corrections. Several chart positions have been struck through and entered again in a different ink, with no explanation in the printed errata.",
-  "Prospective buyers are advised to examine the binding as carefully as the plates. The third gathering has been resewn, and the bookseller makes no claim that the handwritten index accompanied the volume when it was first issued.",
-  "Inspection is by appointment during daylight hours. The asking price will be stated privately; the Correspondent has not independently established the catalogue's provenance."
- ], "tags":["books","charts","sale"], "image":null, "related_ids":["2026-09-25-southern-stations-agree"]
+  "id": "2026-09-25-map-catalogue-sale",
+  "slug": "map-catalogue-sale",
+  "title": "Early Meridian Catalogue Offered for Inspection",
+  "summary": "The bookseller invites careful comparison before the private sale.",
+  "category": "marketplace",
+  "published_at": "2026-09-25T08:20:00Z",
+  "author": "Books and Objects Desk",
+  "dateline": "St. Anselm's Passage",
+  "paragraphs": [
+    "Mr. Corven, bookseller of St. Anselm's Passage, has placed an early meridian catalogue on view ahead of a private sale. The volume contains twelve folding plates and a later hand's index of station names.",
+    "Its interest lies less in the figures than in the corrections. Several chart positions have been struck through and entered again in a different ink, with no explanation in the printed errata.",
+    "Prospective buyers are advised to examine the binding as carefully as the plates. The third gathering has been resewn, and the bookseller makes no claim that the handwritten index accompanied the volume when it was first issued.",
+    "Inspection is by appointment during daylight hours. The asking price will be stated privately; the Correspondent has not independently established the catalogue's provenance."
+  ],
+  "tags": [
+    "books",
+    "charts",
+    "sale"
+  ],
+  "image": null,
+  "related_ids": [
+    "2026-09-25-southern-stations-agree"
+  ],
+  "topic": "Marketplace"
 }

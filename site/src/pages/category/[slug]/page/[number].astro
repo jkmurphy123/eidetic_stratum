@@ -1,12 +1,6 @@
 ---
 import FeedPage from '../../../../components/FeedPage.astro';
-import archive from '../../../../generated/articles.json';
-import {createArchive} from '../../../../lib/archive.mjs';
 export function getStaticPaths() {
-  const selectors=createArchive(archive.articles,archive.categories);
-  return archive.categories.flatMap(category => selectors.categoryPages(category.slug).slice(1).map(page => ({params:{slug:category.slug,number:String(page.number)}})));
+  return [];
 }
-const {slug} = Astro.params;
-const number=Number(Astro.params.number);
 ---
-<FeedPage kind="category" slug={slug} number={number} />

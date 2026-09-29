@@ -40,7 +40,7 @@ export function validateRecords(articles, categories, imageExists = () => false)
     catch { errors.push(`${id}: invalid timestamp`); }
     if (realDate && Date.parse(published_at) > Date.now()) errors.push(`${id}: future-dated publication is not authorized`);
     if (realDate && id !== `${realDate}-${slug}`) errors.push(`${id}: id must match UTC timestamp date and slug`);
-    if (paragraphs.length < 4) warnings.push(`${id}: short notice (${paragraphs.length} paragraphs); review editorially`);
+    if (paragraphs.length < 4 && category !== 'agony-column') warnings.push(`${id}: short notice (${paragraphs.length} paragraphs); review editorially`);
     if (paragraphs.length > 6) warnings.push(`${id}: long article (${paragraphs.length} paragraphs); review editorially`);
     const plain=[article.title,article.summary,article.author,article.dateline || '',...paragraphs];
     if (image) plain.push(image.alt,image.caption,image.credit);
