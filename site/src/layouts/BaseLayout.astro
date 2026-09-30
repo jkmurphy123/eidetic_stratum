@@ -18,7 +18,7 @@ const edition = printEditionDate(new Date().toISOString().slice(0, 19) + 'Z');
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="edition-line"><span>ESTABLISHED FOR THE INQUIRING MIND</span><span>ALDERWICK · {edition}</span><span>PRICE: ONE PENNY</span></div>
-      <div class="brand"><a href="/" aria-label="The Alderwick Correspondent home">The Alderwick Correspondent</a><p>News for the Serious Eidetician</p></div>
+      <div class="brand"><a href="/" aria-label="The Alderwick Correspondent home"><img src="/images/banner.png" alt="The Alderwick Correspondent — News for the Serious Eidetician" /></a></div>
       <nav class="category-nav" aria-label="Sections">
         <a href="/" aria-current={active === 'home' ? 'page' : undefined}>Front Page</a>
         {archive.categories.map(category => <a href={`/category/${category.slug}/`} aria-current={active === category.slug ? 'page' : undefined}>{category.label}</a>)}
