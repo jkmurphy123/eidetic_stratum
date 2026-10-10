@@ -1,0 +1,29 @@
+{
+    "id": "1881-10-02-rain-rises-from-weaver-court",
+    "slug": "rain-rises-from-weaver-court",
+    "title": "Dispatch RFU 1: Rain Rises from Weaver Court",
+    "summary": "Water lifts from the stones despite a cloudless sky.",
+    "category": "field-reports",
+    "topic": "The Rain That Falls Upward",
+    "published_at": "1881-10-02T12:00:00Z",
+    "author": "Clara Vale, Staff Correspondent",
+    "dateline": "Alderwick",
+    "paragraphs": [
+        "Residents of Weaver Court watched rain rise from its paving for eleven minutes yesterday. Drops gathered in the cracks, passed the upper windows, and entered a small unmoving cloud. Dr. Lenora Saye found the stones dry before and after the event.",
+        "A bottle held under the rising drops remained empty, though a cloth laid upon the pavement became wet. The Institute has closed the courtyard for observation. Its caretaker says the cloud was present before sunrise and has not moved with the wind."
+    ],
+    "tags": [
+        "the-rain-that-falls-upward",
+        "alderwick",
+        "eidetical-institute"
+    ],
+    "image": {
+        "src": "/images/articles/1881/10/02/rain-rises-from-weaver-court.png",
+        "alt": "Illustration for Dispatch RFU 1: Rain Rises from Weaver Court",
+        "caption": "Dispatch RFU 1: Rain Rises from Weaver Court",
+        "credit": "The Alderwick Correspondent"
+    },
+    "related_ids": [
+        "1881-10-05-soil-in-the-rising-water-comes-from-elsewhere"
+    ]
+}

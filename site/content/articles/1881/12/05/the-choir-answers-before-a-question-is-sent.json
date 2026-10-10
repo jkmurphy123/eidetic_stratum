@@ -1,0 +1,29 @@
+{
+    "id": "1881-12-05-the-choir-answers-before-a-question-is-sent",
+    "slug": "the-choir-answers-before-a-question-is-sent",
+    "title": "Dispatch CTW 2: The Choir Answers Before a Question Is Sent",
+    "summary": "A reply arrives six minutes ahead of the message that prompts it.",
+    "category": "field-reports",
+    "topic": "The Choir in the Telegraph Wires",
+    "published_at": "1881-12-05T12:00:00Z",
+    "author": "Clara Vale, Staff Correspondent",
+    "dateline": "Alderwick",
+    "paragraphs": [
+        "An Alderwick operator intended to ask Kingsfen whether its line was clear. Before she touched the key, the choir sang, \u201cClear until the ninth bell.\u201d She transmitted the question anyway. Kingsfen received it and heard the same answer afterward.",
+        "Mr. Bell has barred tests involving private messages. He fears that operators will mistake a sung reply for a verified dispatch. Dr. Saye notes that the voices keep the rhythm of an old signaling practice abandoned after the Low Fell line closed."
+    ],
+    "tags": [
+        "the-choir-in-the-telegraph-wires",
+        "alderwick",
+        "eidetical-institute"
+    ],
+    "image": {
+        "src": "/images/articles/1881/12/05/the-choir-answers-before-a-question-is-sent.png",
+        "alt": "Illustration for Dispatch CTW 2: The Choir Answers Before a Question Is Sent",
+        "caption": "Dispatch CTW 2: The Choir Answers Before a Question Is Sent",
+        "credit": "The Alderwick Correspondent"
+    },
+    "related_ids": [
+        "1881-12-08-names-of-dead-operators-found-in-the-chorus"
+    ]
+}

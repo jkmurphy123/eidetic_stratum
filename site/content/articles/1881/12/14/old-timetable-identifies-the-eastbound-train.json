@@ -1,0 +1,29 @@
+{
+    "id": "1881-12-14-old-timetable-identifies-the-eastbound-train",
+    "slug": "old-timetable-identifies-the-eastbound-train",
+    "title": "Dispatch CTW 5: Old Timetable Identifies the Eastbound Train",
+    "summary": "The message once failed to reach a signalman in time.",
+    "category": "field-reports",
+    "topic": "The Choir in the Telegraph Wires",
+    "published_at": "1881-12-14T12:00:00Z",
+    "author": "Clara Vale, Staff Correspondent",
+    "dateline": "Alderwick",
+    "paragraphs": [
+        "The 1891 inquiry into the Hollow Junction fire mentions an eastbound goods train held outside the station. Its signalman never received the order to proceed after the fire. He waited until morning, avoiding a damaged bridge that would not be inspected until dawn.",
+        "Dr. Saye thinks the chorus is still trying to send the hold order, not predict a present accident. Yet tonight\u2019s eastbound train is due to pass the same bridge. Railway inspectors have closed it for examination before the service departs."
+    ],
+    "tags": [
+        "the-choir-in-the-telegraph-wires",
+        "alderwick",
+        "eidetical-institute"
+    ],
+    "image": {
+        "src": "/images/articles/1881/12/14/old-timetable-identifies-the-eastbound-train.png",
+        "alt": "Illustration for Dispatch CTW 5: Old Timetable Identifies the Eastbound Train",
+        "caption": "Dispatch CTW 5: Old Timetable Identifies the Eastbound Train",
+        "credit": "The Alderwick Correspondent"
+    },
+    "related_ids": [
+        "1881-12-17-bridge-damage-found-after-the-choir-falls-silent"
+    ]
+}

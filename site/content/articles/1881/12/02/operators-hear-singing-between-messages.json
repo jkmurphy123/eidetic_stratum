@@ -1,0 +1,29 @@
+{
+    "id": "1881-12-02-operators-hear-singing-between-messages",
+    "slug": "operators-hear-singing-between-messages",
+    "title": "Dispatch CTW 1: Operators Hear Singing between Messages",
+    "summary": "The chorus appears on three lines and names no sender.",
+    "category": "field-reports",
+    "topic": "The Choir in the Telegraph Wires",
+    "published_at": "1881-12-02T12:00:00Z",
+    "author": "Clara Vale, Staff Correspondent",
+    "dateline": "Alderwick",
+    "paragraphs": [
+        "Telegraph operators at Alderwick Central heard a low chorus between routine messages yesterday. It repeated the last phrase of a shipping notice, then fell silent when the line was disconnected. Operators at Kingsfen and Low Fell report hearing the same voices.",
+        "Chief operator Thomas Bell has preserved the paper tapes. Their marks show ordinary traffic but no signal corresponding to the song. Dr. Lenora Saye has been asked to examine the unused wires along which one operator says the voices seemed to travel."
+    ],
+    "tags": [
+        "the-choir-in-the-telegraph-wires",
+        "alderwick",
+        "eidetical-institute"
+    ],
+    "image": {
+        "src": "/images/articles/1881/12/02/operators-hear-singing-between-messages.png",
+        "alt": "Illustration for Dispatch CTW 1: Operators Hear Singing between Messages",
+        "caption": "Dispatch CTW 1: Operators Hear Singing between Messages",
+        "credit": "The Alderwick Correspondent"
+    },
+    "related_ids": [
+        "1881-12-05-the-choir-answers-before-a-question-is-sent"
+    ]
+}

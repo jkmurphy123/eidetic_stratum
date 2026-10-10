@@ -1,0 +1,32 @@
+{
+    "id": "1882-08-16-warning-voice-is-identified-as-the-missing-attendant",
+    "slug": "warning-voice-is-identified-as-the-missing-attendant",
+    "title": "Dispatch GID 5: Warning Voice Is Identified as the Missing Attendant",
+    "summary": "The cylinders contain speech Miss Crain had not made when either was recorded.",
+    "category": "field-reports",
+    "topic": "The Great Instrument Demonstration",
+    "published_at": "1882-08-16T12:00:00Z",
+    "author": "Clara Vale, Staff Correspondent",
+    "dateline": "Alderwick",
+    "paragraphs": [
+        "Dr. Saye has compared the warning on both demonstration cylinders with a dictation Miss Crain made for the Lyceum office last month. Its consonants, breath, and a slight pause before the last word agree. Ruth Crain recognized the voice without being told whom the Institute suspected.",
+        "No one heard Miss Crain speak the warning while she was present at the first showing. At the second, witnesses saw her walking toward the new aisle when it sounded. Dr. Saye cautions that a matching voice does not establish when the words were spoken. The Stratum has produced misleading sequences before.",
+        "Miss Marsh has examined Halden\u2019s trial notes. In the earliest private session, the plate showed each observer a different room. One observer reported a second row of people seated behind the actual audience. Halden omitted that report from his public account because, he says, the witness had been uncertain.",
+        "Inspector Voss sealed the Lyceum after a fresh passage appeared in the paint of its rear wall. The line resembles the outline of a door, but a survey from the street shows no room behind it. The manager says the unsold seat has acquired a second impression beside the first.",
+        "Halden has offered to operate the instrument again if it will recover Miss Crain. Miss Marsh refuses to assist until they understand what kept the new aisle visible after the lamp was extinguished. \u201cTurning off the lamp was not enough,\u201d she said. \u201cThe warning meant something more.\u201d"
+    ],
+    "tags": [
+        "the-great-instrument-demonstration",
+        "alderwick",
+        "eidetical-institute"
+    ],
+    "image": {
+        "src": "/images/articles/1882/08/16/warning-voice-is-identified-as-the-missing-attendant.png",
+        "alt": "Illustration for Dispatch GID 5: Warning Voice Is Identified as the Missing Attendant",
+        "caption": "Dispatch GID 5: Warning Voice Is Identified as the Missing Attendant",
+        "credit": "The Alderwick Correspondent"
+    },
+    "related_ids": [
+        "1882-08-19-an-audience-appears-in-the-darkened-lyceum"
+    ]
+}
